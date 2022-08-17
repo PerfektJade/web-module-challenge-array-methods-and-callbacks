@@ -32,8 +32,11 @@ Use getFinals to do the following:
 // const { fifaData } = require('./fifa.js')
 // const fifaData = [{}]
 
-function getFinals(array) {
-    array.filter
+function getFinals(data) {
+    const allFinals = data.filter(function(item){
+        return item.Stage === 'Final'
+    });
+    return allFinals;
  }
 
 console.log('Task2:', getFinals(fifaData));
